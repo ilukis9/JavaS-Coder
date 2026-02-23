@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="platita.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <pre><code id="visor-codigo"> Cargando código..</code></pre>
+    <script>
+      // Buscamos el archivo en la misma carpeta
+      fetch("platita.js")
+        .then((response) => response.text())
+        .then((data) => {
+          // Usamos textContent para que no se ejecute, solo se muestre
+          document.getElementById("visor-codigo").textContent = data;
+        })
+        .catch((err) => console.error("No se pudo cargar el archivo:", err));
+    </script>
+  </body>
+</html>

@@ -64,7 +64,7 @@ const preguntas = [
     correcta: 2,
   },
 ];
-const incorrectas = [];
+const incorrectas = []; // Arrya para buscar las que se respondan mal
 let puntaje = 0;
 
 const comenzar = confirm("Queres comenzar?");
@@ -104,6 +104,7 @@ console.log("Respuestas correctas: " + puntaje + " de " + preguntas.length);
 console.log("Nota final: " + nota);
 console.log("------------------");
 
+//
 if (nota < 10) {
   console.log("Revisar estas preguntas:");
 

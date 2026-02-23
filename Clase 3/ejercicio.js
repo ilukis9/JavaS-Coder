@@ -4,7 +4,6 @@ let carrito = 0;
 let total = 0;
 let eleccion;
 let continuar = true; // Esto hace que hasta que no ponga Cancel siga dandome la opción de sumar cosas
-let pago = 0;
 
 const sumarAlcarrito = (subtit, precio, cant, item) => {
   carrito = carrito + subtit;
@@ -78,7 +77,7 @@ while (continuar) {
 }
 
 console.log("El subtotal es de: $" + carrito);
-
+let pago = 0;
 if (carrito > 0) {
   pago = prompt(
     "Metodo de pago: \n 1: Efectivo (-" + efectivo * 100 + "%) \n 2: Transferencia (-" + transferencia * 100 + "%) \n 3: Tarjeta de credito",
